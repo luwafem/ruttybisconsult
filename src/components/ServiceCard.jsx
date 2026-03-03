@@ -7,6 +7,9 @@ const ServiceCard = ({ service }) => {
     <div className="group relative bg-white border-t border-stone-200 pt-8 pb-12 px-2 transition-all duration-500 hover:bg-stone-50">
       {/* Decorative Accent Line - appears on hover */}
       <div className="absolute top-0 left-0 w-0 h-[2px] bg-emerald-600 transition-all duration-500 group-hover:w-full" />
+      <Link
+          to={`/services/${service.id}`}
+        >
 
       <div className="flex flex-col h-full">
         {/* Top Meta: Icon & Category */}
@@ -38,6 +41,7 @@ const ServiceCard = ({ service }) => {
           <ArrowRight size={14} className="transform group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>
+      </Link>
     </div>
   );
 };

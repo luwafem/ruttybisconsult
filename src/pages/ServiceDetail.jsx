@@ -1,3 +1,4 @@
+import { useEffect } from "react"; // 1. Added useEffect
 import { useParams, Navigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { siteConfig } from "../config";
@@ -6,6 +7,12 @@ import { ArrowRight, ChevronLeft } from "lucide-react";
 
 const ServiceDetail = () => {
   const { id } = useParams();
+
+  // 2. Scroll to top whenever the ID changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
   const service = siteConfig.services.find((s) => s.id === id);
 
   if (!service) {
@@ -63,7 +70,7 @@ const ServiceDetail = () => {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover  contrast-125 mix-blend-multiply opacity-90"
+                  className="w-full h-full object-cover contrast-125 mix-blend-multiply opacity-90"
                 />
               </div>
               <div className="bg-stone-900 p-8 text-white">
