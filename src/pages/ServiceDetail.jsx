@@ -42,7 +42,7 @@ const ServiceDetail = () => {
               
               <h1 className="text-5xl md:text-7xl font-light tracking-tight text-stone-900 leading-tight">
                 {service.title.split(' ').map((word, i) => i === 0 ? word : <span key={i}> {word}</span>)}
-                <span className="text-emerald-600">.</span>
+                
               </h1>
             </div>
             <div className="lg:col-span-4 pb-2">
