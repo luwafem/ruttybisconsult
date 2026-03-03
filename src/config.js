@@ -14,7 +14,7 @@ export const siteConfig = {
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop", 
     stats: [
       { label: "Statutory Success", value: "100%" },
-      { label: "Enterprises Managed", value: "500+" },
+      { label: "Enterprises Managed", value: "1500+" },
       { label: "Regulatory Speed", value: "2x" }
     ]
   },
