@@ -39,12 +39,7 @@ const ServiceDetail = () => {
           
           <div className="grid lg:grid-cols-12 gap-12 items-end">
             <div className="lg:col-span-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-white border border-stone-200 flex items-center justify-center text-emerald-600 shadow-sm">
-                   <Icon name={service.icon} className="w-6 h-6" />
-                </div>
-                <span className="text-xs font-bold tracking-[0.3em] text-emerald-600 uppercase">Strategic Practice</span>
-              </div>
+              
               <h1 className="text-5xl md:text-7xl font-light tracking-tight text-stone-900 leading-tight">
                 {service.title.split(' ').map((word, i) => i === 0 ? word : <span key={i}> {word}</span>)}
                 <span className="text-emerald-600">.</span>
